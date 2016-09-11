@@ -170,102 +170,102 @@ for feature in features_list:
 ```
 
 
-![png](output_4_0.png)
+![png](data/output_4_0.png)
 
     HANNON KEVIN P
     True
     
-![png](output_4_2.png)
+![png](data/output_4_2.png)
 
     TOTAL
     26704229
 
-![png](output_4_4.png)
+![png](data/output_4_4.png)
 
     SHAPIRO RICHARD S
     15149
 
-![png](output_4_6.png)
+![png](data/output_4_6.png)
 
     TOTAL
     32083396
 
-![png](output_4_8.png)
+![png](data/output_4_8.png)
 
     TOTAL
     309886585
 
-![png](output_4_10.png)
+![png](data/output_4_10.png)
 
     TOTAL
     311764000
     
-![png](output_4_12.png)
+![png](data/output_4_12.png)
 
     TOTAL
     97343619
 
-![png](output_4_14.png)
+![png](data/output_4_14.png)
 
     TOTAL
     130322299
 
-![png](output_4_16.png)
+![png](data/output_4_16.png)
 
     BELDEN TIMOTHY N
     5521
 
-![png](output_4_18.png)
+![png](data/output_4_18.png)
 
     BHATNAGAR SANJAY
     15456290
 
-![png](output_4_20.png)
+![png](data/output_4_20.png)
 
     TOTAL
     434509511
 
-![png](output_4_22.png)
+![png](data/output_4_22.png)
 
     TOTAL
     5235198
 
-![png](output_4_24.png)
+![png](data/output_4_24.png)
 
     TOTAL
     83925000
 
-![png](output_4_26.png)
+![png](data/output_4_26.png)
 
     KAMINSKI WINCENTY J
     14368
 
-![png](output_4_28.png)
+![png](data/output_4_28.png)
 
     TOTAL
     42667589
 
-![png](output_4_30.png)
+![png](data/output_4_30.png)
 
     DELAINEY DAVID W
     609
 
-![png](output_4_32.png)
+![png](data/output_4_32.png)
 
     TOTAL
     1398517 
 
-![png](output_4_34.png)
+![png](data/output_4_34.png)
 
     TOTAL
     0    
 
-![png](output_4_36.png)
+![png](data/output_4_36.png)
 
     TOTAL
     48521928
 
-![png](output_4_38.png)
+![png](data/output_4_38.png)
 
     LAVORATO JOHN J
     528
