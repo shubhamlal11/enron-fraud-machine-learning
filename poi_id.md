@@ -168,7 +168,7 @@ for feature in features_list:
 ```
 
 
-![png](output_4_0.png)
+![png](data/output_4_0.png)
 
 
     HANNON KEVIN P
@@ -179,7 +179,7 @@ for feature in features_list:
     
 
 
-![png](output_4_2.png)
+![png](data/output_4_2.png)
 
 
     TOTAL
@@ -190,7 +190,7 @@ for feature in features_list:
     
 
 
-![png](output_4_4.png)
+![png](data/output_4_4.png)
 
 
     SHAPIRO RICHARD S
@@ -201,7 +201,7 @@ for feature in features_list:
     
 
 
-![png](output_4_6.png)
+![png](data/output_4_6.png)
 
 
     TOTAL
@@ -212,7 +212,7 @@ for feature in features_list:
     
 
 
-![png](output_4_8.png)
+![png](data/output_4_8.png)
 
 
     TOTAL
@@ -223,7 +223,7 @@ for feature in features_list:
     
 
 
-![png](output_4_10.png)
+![png](data/output_4_10.png)
 
 
     TOTAL
@@ -234,7 +234,7 @@ for feature in features_list:
     
 
 
-![png](output_4_12.png)
+![png](data/output_4_12.png)
 
 
     TOTAL
@@ -245,7 +245,7 @@ for feature in features_list:
     
 
 
-![png](output_4_14.png)
+![png](data/output_4_14.png)
 
 
     TOTAL
@@ -256,7 +256,7 @@ for feature in features_list:
     
 
 
-![png](output_4_16.png)
+![png](data/output_4_16.png)
 
 
     BELDEN TIMOTHY N
@@ -267,7 +267,7 @@ for feature in features_list:
     
 
 
-![png](output_4_18.png)
+![png](data/output_4_18.png)
 
 
     BHATNAGAR SANJAY
@@ -278,7 +278,7 @@ for feature in features_list:
     
 
 
-![png](output_4_20.png)
+![png](data/output_4_20.png)
 
 
     TOTAL
@@ -289,7 +289,7 @@ for feature in features_list:
     
 
 
-![png](output_4_22.png)
+![png](data/output_4_22.png)
 
 
     TOTAL
@@ -300,7 +300,7 @@ for feature in features_list:
     
 
 
-![png](output_4_24.png)
+![png](data/output_4_24.png)
 
 
     TOTAL
@@ -311,7 +311,7 @@ for feature in features_list:
     
 
 
-![png](output_4_26.png)
+![png](data/output_4_26.png)
 
 
     KAMINSKI WINCENTY J
@@ -322,7 +322,7 @@ for feature in features_list:
     
 
 
-![png](output_4_28.png)
+![png](data/output_4_28.png)
 
 
     TOTAL
@@ -333,7 +333,7 @@ for feature in features_list:
     
 
 
-![png](output_4_30.png)
+![png](data/output_4_30.png)
 
 
     DELAINEY DAVID W
@@ -344,7 +344,7 @@ for feature in features_list:
     
 
 
-![png](output_4_32.png)
+![png](data/output_4_32.png)
 
 
     TOTAL
@@ -355,7 +355,7 @@ for feature in features_list:
     
 
 
-![png](output_4_34.png)
+![png](data/output_4_34.png)
 
 
     TOTAL
@@ -366,7 +366,7 @@ for feature in features_list:
     
 
 
-![png](output_4_36.png)
+![png](data/output_4_36.png)
 
 
     TOTAL
@@ -377,7 +377,7 @@ for feature in features_list:
     
 
 
-![png](output_4_38.png)
+![png](data/output_4_38.png)
 
 
     LAVORATO JOHN J
@@ -440,7 +440,7 @@ for feature in features_list:
 ```
 
 
-![png](output_6_0.png)
+![png](data/output_6_0.png)
 
 
     HANNON KEVIN P
@@ -451,7 +451,7 @@ for feature in features_list:
     
 
 
-![png](output_6_2.png)
+![png](data/output_6_2.png)
 
 
     SKILLING JEFFREY K
@@ -462,7 +462,7 @@ for feature in features_list:
     
 
 
-![png](output_6_4.png)
+![png](data/output_6_4.png)
 
 
     SHAPIRO RICHARD S
@@ -473,7 +473,7 @@ for feature in features_list:
     
 
 
-![png](output_6_6.png)
+![png](data/output_6_6.png)
 
 
     FREVERT MARK A
@@ -484,7 +484,7 @@ for feature in features_list:
     
 
 
-![png](output_6_8.png)
+![png](data/output_6_8.png)
 
 
     LAY KENNETH L
@@ -495,7 +495,7 @@ for feature in features_list:
     
 
 
-![png](output_6_10.png)
+![png](data/output_6_10.png)
 
 
     LAY KENNETH L
@@ -506,7 +506,7 @@ for feature in features_list:
     
 
 
-![png](output_6_12.png)
+![png](data/output_6_12.png)
 
 
     LAVORATO JOHN J
@@ -517,7 +517,7 @@ for feature in features_list:
     
 
 
-![png](output_6_14.png)
+![png](data/output_6_14.png)
 
 
     LAY KENNETH L
@@ -528,7 +528,7 @@ for feature in features_list:
     
 
 
-![png](output_6_16.png)
+![png](data/output_6_16.png)
 
 
     BELDEN TIMOTHY N
@@ -539,7 +539,7 @@ for feature in features_list:
     
 
 
-![png](output_6_18.png)
+![png](data/output_6_18.png)
 
 
     BHATNAGAR SANJAY
@@ -550,7 +550,7 @@ for feature in features_list:
     
 
 
-![png](output_6_20.png)
+![png](data/output_6_20.png)
 
 
     LAY KENNETH L
@@ -561,7 +561,7 @@ for feature in features_list:
     
 
 
-![png](output_6_22.png)
+![png](data/output_6_22.png)
 
 
     MCCLELLAN GEORGE
@@ -572,7 +572,7 @@ for feature in features_list:
     
 
 
-![png](output_6_24.png)
+![png](data/output_6_24.png)
 
 
     LAY KENNETH L
@@ -583,7 +583,7 @@ for feature in features_list:
     
 
 
-![png](output_6_26.png)
+![png](data/output_6_26.png)
 
 
     KAMINSKI WINCENTY J
@@ -594,7 +594,7 @@ for feature in features_list:
     
 
 
-![png](output_6_28.png)
+![png](data/output_6_28.png)
 
 
     LAY KENNETH L
@@ -605,7 +605,7 @@ for feature in features_list:
     
 
 
-![png](output_6_30.png)
+![png](data/output_6_30.png)
 
 
     DELAINEY DAVID W
@@ -616,7 +616,7 @@ for feature in features_list:
     
 
 
-![png](output_6_32.png)
+![png](data/output_6_32.png)
 
 
     BHATNAGAR SANJAY
@@ -627,7 +627,7 @@ for feature in features_list:
     
 
 
-![png](output_6_34.png)
+![png](data/output_6_34.png)
 
 
     BHATNAGAR SANJAY
@@ -638,7 +638,7 @@ for feature in features_list:
     
 
 
-![png](output_6_36.png)
+![png](data/output_6_36.png)
 
 
     MARTIN AMANDA K
@@ -649,7 +649,7 @@ for feature in features_list:
     
 
 
-![png](output_6_38.png)
+![png](data/output_6_38.png)
 
 
     LAVORATO JOHN J
