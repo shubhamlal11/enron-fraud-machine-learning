@@ -1,4 +1,6 @@
+## Creating Data Dictionary
 
+>Loading the data into a python dictionary and printing out the features stored in each key.
 
 ```python
 #!/usr/bin/python
@@ -10,7 +12,6 @@ sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 from tester import dump_classifier_and_data
 
-### Load the dictionary containing the dataset
 with open("final_project_dataset.pkl", "r") as data_file:
     data_dict = pickle.load(data_file)
     
@@ -43,11 +44,11 @@ for key in data_dict.keys():
     from_poi_to_this_person
     
 
+## Creating "features_list"
+
+>Appending all the features into features-list with first feature as "poi" 
 
 ```python
-### Task 1: Select what features you'll use.
-### features_list is a list of strings, each of which is a feature name.
-### The first feature must be "poi".
 features_list = ['poi']
 for key in data_dict.keys():
     for value in data_dict[key]:
@@ -58,7 +59,6 @@ for key in data_dict.keys():
 
 import pprint
 pprint.pprint(features_list)
-# You will need to use more features
 ```
 
     ['poi',
@@ -84,6 +84,9 @@ pprint.pprint(features_list)
      'from_poi_to_this_person']
     
 
+### Removing features that are not required
+
+>Email address can in no way differentiate between a poi and a non poi.
 
 ```python
 features_list.remove('email_address')
@@ -111,7 +114,7 @@ pprint.pprint(features_list)
      'long_term_incentive',
      'from_poi_to_this_person']
     
-
+### Total number of empty fields in each feature
 
 ```python
 for feature in features_list:
@@ -143,7 +146,7 @@ for feature in features_list:
     long_term_incentive -> 80
     from_poi_to_this_person -> 60
     
-
+## Removing Outliers
 
 ```python
 %matplotlib inline
@@ -163,236 +166,116 @@ for feature in features_list:
     plt.show()
     print name
     print maxi
-    print "\n ------------------------------------------------------------------------------------ \n"
 
 ```
 
 
-![png](data/output_4_0.png)
-
+![png](output_4_0.png)
 
     HANNON KEVIN P
     True
     
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_4_2.png)
-
+![png](output_4_2.png)
 
     TOTAL
     26704229
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_4.png)
-
+![png](output_4_4.png)
 
     SHAPIRO RICHARD S
     15149
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_6.png)
-
+![png](output_4_6.png)
 
     TOTAL
     32083396
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_8.png)
-
+![png](output_4_8.png)
 
     TOTAL
     309886585
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_10.png)
-
+![png](output_4_10.png)
 
     TOTAL
     311764000
     
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_4_12.png)
-
+![png](output_4_12.png)
 
     TOTAL
     97343619
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_14.png)
-
+![png](output_4_14.png)
 
     TOTAL
     130322299
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_16.png)
-
+![png](output_4_16.png)
 
     BELDEN TIMOTHY N
     5521
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_18.png)
-
+![png](output_4_18.png)
 
     BHATNAGAR SANJAY
     15456290
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_20.png)
-
+![png](output_4_20.png)
 
     TOTAL
     434509511
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_22.png)
-
+![png](output_4_22.png)
 
     TOTAL
     5235198
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_24.png)
-
+![png](output_4_24.png)
 
     TOTAL
     83925000
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_26.png)
-
+![png](output_4_26.png)
 
     KAMINSKI WINCENTY J
     14368
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_28.png)
-
+![png](output_4_28.png)
 
     TOTAL
     42667589
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_30.png)
-
+![png](output_4_30.png)
 
     DELAINEY DAVID W
     609
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_32.png)
-
+![png](output_4_32.png)
 
     TOTAL
-    1398517
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
+    1398517 
 
-
-![png](data/output_4_34.png)
-
+![png](output_4_34.png)
 
     TOTAL
-    0
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
+    0    
 
-
-![png](data/output_4_36.png)
-
+![png](output_4_36.png)
 
     TOTAL
     48521928
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
 
-
-![png](data/output_4_38.png)
-
+![png](output_4_38.png)
 
     LAVORATO JOHN J
     528
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
+
+>In majority of the cases the key _"TOTAL"_ is as an outlier. Hence, this key must be removed from the dictionary.
 
 
 ```python
 data_dict.pop('TOTAL')
 ```
-
-
 
 
     {'bonus': 97343619,
@@ -417,248 +300,7 @@ data_dict.pop('TOTAL')
      'total_payments': 309886585,
      'total_stock_value': 434509511}
 
-
-
-
-```python
-for feature in features_list:
-    maxi = 0
-    cnt=0
-    for key in data_dict:
-        cnt+=1
-        point=data_dict[key][feature]
-        if point>maxi and point != 'NaN':
-            maxi = point
-            name = key
-        plt.scatter(point, cnt)
-    plt.xlabel(feature)
-    plt.show()
-    print name
-    print maxi
-    print "\n ------------------------------------------------------------------------------------ \n"
-
-```
-
-
-![png](data/output_6_0.png)
-
-
-    HANNON KEVIN P
-    True
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_2.png)
-
-
-    SKILLING JEFFREY K
-    1111258
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_4.png)
-
-
-    SHAPIRO RICHARD S
-    15149
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_6.png)
-
-
-    FREVERT MARK A
-    6426990
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_8.png)
-
-
-    LAY KENNETH L
-    103559793
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_10.png)
-
-
-    LAY KENNETH L
-    34348384
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_12.png)
-
-
-    LAVORATO JOHN J
-    8000000
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_14.png)
-
-
-    LAY KENNETH L
-    14761694
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_16.png)
-
-
-    BELDEN TIMOTHY N
-    5521
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_18.png)
-
-
-    BHATNAGAR SANJAY
-    15456290
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_20.png)
-
-
-    LAY KENNETH L
-    49110078
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_22.png)
-
-
-    MCCLELLAN GEORGE
-    228763
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_24.png)
-
-
-    LAY KENNETH L
-    81525000
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_26.png)
-
-
-    KAMINSKI WINCENTY J
-    14368
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_28.png)
-
-
-    LAY KENNETH L
-    10359729
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_30.png)
-
-
-    DELAINEY DAVID W
-    609
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_32.png)
-
-
-    BHATNAGAR SANJAY
-    137864
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_34.png)
-
-
-    BHATNAGAR SANJAY
-    0
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_36.png)
-
-
-    MARTIN AMANDA K
-    5145434
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
-
-![png](data/output_6_38.png)
-
-
-    LAVORATO JOHN J
-    528
-    
-     ------------------------------------------------------------------------------------ 
-    
-    
-
+### Validating the keys of the Dictionary
 
 ```python
 for key in data_dict.keys():
@@ -811,14 +453,12 @@ for key in data_dict.keys():
     DONAHUE JR JEFFREY M
     GLISAN JR BEN F
     
+>The key _THE TRAVEL AGENCY IN THE PARK_ doesn't seems to be an individual's name. This could possibly be a bug in the dataset.
 
 
 ```python
 data_dict.pop('THE TRAVEL AGENCY IN THE PARK')
 ```
-
-
-
 
     {'bonus': 'NaN',
      'deferral_payments': 'NaN',
@@ -843,7 +483,9 @@ data_dict.pop('THE TRAVEL AGENCY IN THE PARK')
      'total_stock_value': 'NaN'}
 
 
+## Removing features of little importance.
 
+>'restricted_stock_deferred', 'director_fees', 'loan_advances' are the features which have majority of its value equal to "NaN", i.e, missing. Therefore, its better to remove them.
 
 ```python
 features_list.remove('restricted_stock_deferred')
@@ -851,6 +493,9 @@ features_list.remove('director_fees')
 features_list.remove('loan_advances')
 ```
 
+## Creating features
+
+>Rather than the number of messages involving "Person of Interest" and total number of messages, their ratio could be a better feature to judge a person.
 
 ```python
 for key in data_dict.keys():
@@ -877,7 +522,6 @@ features_list.remove('from_messages')
 features_list.remove('to_messages')
 ```
 
-
 ```python
 pprint.pprint(features_list)
 ```
@@ -899,17 +543,16 @@ pprint.pprint(features_list)
      'fraction_from_poi_to_this_person']
     
 
+## Spliting the Data into Features and Labels
 
 ```python
-### Task 3: Create new feature(s)
-### Store to my_dataset for easy export below.
-my_dataset = data_dict
 
-### Extract features and labels from dataset for local testing
+my_dataset = data_dict
 data = featureFormat(my_dataset, features_list, sort_keys = True)
 labels, features = targetFeatureSplit(data)
 ```
 
+>Total number of persons in the dataset.
 
 ```python
 print len(features)
@@ -919,7 +562,7 @@ print len(labels)
     143
     143
     
-
+>Total number of features of each individual
 
 ```python
 print len(features[0])
@@ -931,7 +574,7 @@ print labels[0]
     14
     0.0
     
-
+## Feature Scaling
 
 ```python
 from sklearn.preprocessing import MinMaxScaler
@@ -939,6 +582,10 @@ scaler = MinMaxScaler()
 features = scaler.fit_transform(features)
 ```
 
+## Feature Selection
+
+>Using KBest from `sklearn.feature-selection`, 10 best features are selected for further analysis.
+The scores of the selected features are printed below.
 
 ```python
 from sklearn.feature_selection import SelectKBest
@@ -952,7 +599,7 @@ print selection.scores_
        9.21281062   8.58942073  24.18289868   6.09417331   4.18747751
       11.45847658   9.92218601  16.40971255   3.12809175]
     
-
+>Revised feature_list
 
 ```python
 new_flist = ['poi']
@@ -967,30 +614,22 @@ print features_list
     ['poi', 'salary', 'total_payments', 'exercised_stock_options', 'bonus', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'deferred_income', 'long_term_incentive', 'fraction_from_this_person_to_poi']
     
 
+## Spliting the data into Training and Testing datasets
+
+>The parameter test-size adjusts the size of testing dataset. For the given case, the size of testing data is 30% of the original dataset.
 
 ```python
-### Task 5: Tune your classifier to achieve better than .3 precision and recall 
-### using our testing script. Check the tester.py script in the final project
-### folder for details on the evaluation method, especially the test_classifier
-### function. Because of the small size of the dataset, the script uses
-### stratified shuffle split cross validation. For more info: 
-### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
-
-# Example starting point. Try investigating other evaluation techniques!
 from sklearn.cross_validation import train_test_split
 features_train, features_test, labels_train, labels_test = \
     train_test_split(features, labels, test_size=0.3, random_state=42)
 ```
 
+## Trying different classifiers and algorithms
+
+> Different classifier algorithms is used and each time the accuracy is calculated. Some algorithms are also used multiple times by adjusting the parameters to look for better results.
 
 ```python
-### Task 4: Try a varity of classifiers
-### Please name your classifier clf for easy export below.
-### Note that if you want to do PCA or other multi-stage operations,
-### you'll need to use Pipelines. For more info:
-### http://scikit-learn.org/stable/modules/pipeline.html
 
-# Provided to give you a starting point. Try a variety of classifiers.
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
@@ -1007,6 +646,9 @@ clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
 ```
 
+## Validating
+
+>Precision and Recall can better judge the results than accuracy.
 
 ```python
 from sklearn import metrics
@@ -1020,13 +662,11 @@ print metrics.precision_score(labels_test, pred)
     0.444444444444
     
 
+## Evaluating
+
+>Running the algorithm on different samples of same dataset.
 
 ```python
-### Task 6: Dump your classifier, dataset, and features_list so anyone can
-### check your results. You do not need to change anything below, but make sure
-### that the version of poi_id.py that you submit can be run on its own and
-### generates the necessary .pkl files for validating your results.
-
 dump_classifier_and_data(clf, my_dataset, features_list)
 ```
 
